@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0cb7f2"
+    tools:context=".FragmentClima">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="417dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="670dp"
+        android:background="#063254"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonToGeo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ffffff"
+            android:layout_marginLeft="60dp"
+            android:width="155dp"
+            android:text="Geolocalización"
+            android:textColor="#063254"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonToClima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ffffff"
+            android:textColor="#063254"
+            android:textStyle="bold"
+            android:text="Clima"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonToGeo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar clima"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_width="417dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="417dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:background="#0cb7f2"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/EditLatitud"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:hint="Latitud"
+            android:inputType="text"
+            android:textColorHint="#080808"
+            android:padding="8dip"
+            android:background="@drawable/editshape"
+            android:backgroundTint="#9c9c9c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="40dp" />
+
+
+
+        <EditText
+            android:id="@+id/EditLongitud"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Longitud"
+            android:textColorHint="#080808"
+            android:padding="8dip"
+            android:background="@drawable/editshape"
+            android:backgroundTint="#9c9c9c"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="170dp" />
+
+        <Button
+            android:id="@+id/ButtonBuscar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#063254"
+            android:text="Buscar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="290dp" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
