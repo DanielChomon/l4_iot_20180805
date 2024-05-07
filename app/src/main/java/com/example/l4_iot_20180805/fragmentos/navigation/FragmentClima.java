@@ -1,8 +1,8 @@
-package com.example.l4_iot_20180805;
+package com.example.l4_iot_20180805.fragmentos.navigation;
 
 import static android.content.Context.SENSOR_SERVICE;
-import static androidx.core.content.ContextCompat.getSystemService;
 
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,33 +12,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
-import android.content.pm.PackageManager;
+
 import android.hardware.Sensor;
-import android.hardware.SensorManager;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-
-import com.example.l4_iot_20180805.entity.Ciudad;
-import com.example.lab4_iot_20180805.databinding.FragmentGeoBinding;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-
-import com.example.lab4_iot_20180805.R;
+import com.example.l4_iot_20180805.SensorAccListener;
 import com.example.lab4_iot_20180805.databinding.FragmentClimaBinding;
+import com.example.lab4_iot_20180805.R;
 
 import java.util.List;
-import java.util.concurrent.Executor;
 
-public class FragmentGeo extends Fragment {
+public class FragmentClima extends Fragment {
 
-    FragmentGeoBinding binding;
+    FragmentClimaBinding binding;
+
     SensorManager mSensorManager;
     SensorAccListener listener = new SensorAccListener();
 
@@ -46,19 +33,20 @@ public class FragmentGeo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        binding = FragmentGeoBinding.inflate(inflater, container, false);
+        binding = FragmentClimaBinding.inflate(inflater, container, false);
 
-        binding.buttonToGeo.setOnClickListener(view -> {
+        binding.buttonToClima.setOnClickListener(view -> {
 
-            NavController navController = NavHostFragment.findNavController(FragmentGeo.this);
-            navController.navigate(R.id.action_fragmentA_to_fragmentB);
+            NavController navController = NavHostFragment.findNavController(FragmentClima.this);
+            navController.navigate(R.id.action_fragmentB_to_fragmentA);
             //navController.navigate(FragmentCDirections.actionFragmentCToFragmentA());
         });
+        return binding.getRoot();
 
-
-
+    }}
+/*
         super.onCreate(savedInstanceState);
-        binding = FragmentGeoBinding.inflate(getLayoutInflater());
+        binding = FragmentClimaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -97,8 +85,4 @@ public class FragmentGeo extends Fragment {
         //Sensor mGyr = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         //mSensorManager.registerListener(listener,mGyr,SensorManager.SENSOR_DELAY_UI);
     }
-
-
-
-
-}
+*/
